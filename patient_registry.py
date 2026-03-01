@@ -64,6 +64,15 @@ class PatientRegistry:
             raise ValueError("Name must be a non-empty string")
         self.patients[patient_id] = {"name": name}
 
+    # Delete patient record
+    def delete_patient(self, patient_id):
+        """
+        Deletes the patient record with the corresponding patient ID.
+        """
+        # REQ-05: Delete patient using Patient ID
+        del self.patients[patient_id]
+
+
     
 if __name__ == "__main__":
     registry = PatientRegistry()
